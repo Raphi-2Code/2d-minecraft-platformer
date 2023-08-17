@@ -91,8 +91,7 @@ def update():
             entities.append(entity)
     if distance(player,coin)<=0.5 and k==True:
         coin.texture="benx"
-        music.stop()
-        music.clip="skipidi_dop.mp3"
-        music.play()
+        destroy(music)
+        music=Audio('skipidi_dop.mp3', loop=True, autoplay=True)
         k=False
 app.run()
